@@ -1,0 +1,72 @@
+.marquee-H {
+  overflow: hidden;
+
+  p {
+    animation: moving 20s linear infinite;
+
+  }
+
+  @media screen and (max-width:1024px) {
+    p {
+      animation: moving-1024 20s linear infinite;
+    }
+  }
+
+  @media screen and (max-width:900px) {
+    p {
+      animation: moving-900 15s linear infinite;
+    }
+  }
+
+  @media screen and (max-width:800px) {
+    p {
+      animation: moving-800 15s linear infinite;
+    }
+  }
+
+  @keyframes moving {
+    0% {
+      transform: translate(200%, 0);
+    }
+
+    100% {
+      transform: translate(-100%, 0);
+    }
+  }
+
+  @keyframes moving-1024 {
+    0% {
+      transform: translate(180%, 0);
+    }
+
+    100% {
+      transform: translate(-100%, 0);
+    }
+  }
+
+  @keyframes moving-900 {
+    0% {
+      transform: translate(150%, 0);
+    }
+
+    100% {
+      transform: translate(-100%, 0);
+    }
+  }
+
+  @keyframes moving-800 {
+    0% {
+      transform: translate(130%, 0);
+    }
+
+    100% {
+      transform: translate(-100%, 0);
+    }
+  }
+
+  &:hover {
+    p {
+      animation-play-state: paused;
+    }
+  }
+}

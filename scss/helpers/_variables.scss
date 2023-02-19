@@ -1,0 +1,16 @@
+$primary_color-default: #1a140f;
+$primary_color-dark: #110e09;
+$primary_color-tint: #241d17;
+$textColor-tint:#fae9be;
+$textColor-default:#ccac57;
+
+
+$headerHeight: 135px;
+$loginHeight:53px;
+$helpLinkIconWidth:30px;
+$helpLinkIconColor:$textColor-tint;
+$gameNavBottomH:47px;
+$prizeH:520px;
+$prizeTitleH:46px;
+$prizeInfoH:65px;
+$prizeMarqueeH:calc($prizeH - $prizeInfoH - $prizeTitleH);

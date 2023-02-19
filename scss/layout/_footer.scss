@@ -1,0 +1,38 @@
+footer {
+  background: #110e09;
+
+  .footer_contain {
+    @include max-1200;
+    padding-top: 15px;
+
+    &_logo {
+      @include flex-center;
+      height: 36px;
+
+      img {
+        height: 36px;
+      }
+    }
+
+    &_nav {
+      @include flex-center;
+      color: #794e5e;
+      font-size: 12px;
+
+      span {
+        color: $textColor-tint;
+        display: inline-block;
+        cursor: pointer;
+        font-size: 12px;
+        line-height: 30px;
+      }
+    }
+
+    &_copyright {
+      padding-bottom: 10px;
+      font-size: 12px;
+      text-align: center;
+      color: $textColor-default;
+    }
+  }
+}

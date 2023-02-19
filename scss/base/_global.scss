@@ -1,0 +1,16 @@
+body {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  overscroll-behavior-y: contain;
+  padding-top: $headerHeight;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
