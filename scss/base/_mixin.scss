@@ -5,6 +5,12 @@
   }
 }
 
+@mixin pad-913 {
+  @media(max-width: $breakpoint-pad913) {
+    @content;
+  }
+}
+
 @mixin pad {
   @media(max-width: $breakpoint-pad) {
     @content;

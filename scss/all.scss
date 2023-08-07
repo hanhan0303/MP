@@ -2,8 +2,9 @@
 @import "helpers/variables";
 @import "base/global";
 @import "base/mixin";
-@import "vendors-extensions/slick";
 @import "components/marquee";
 @import "layout/header";
 @import "layout/footer";
 @import "pages/index";
+@import "pages/404";
+@import "pages/articles";

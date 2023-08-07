@@ -1,0 +1,179 @@
+.articles-main {
+  @include max-1200;
+  width: 90%;
+  padding: 20px;
+  color: $textColor-default;
+  display: flex;
+  flex-direction: column;
+
+  h1 {
+    font-size: 2.5rem;
+    color: $textColor-tint;
+    line-height: 1.2;
+    font-weight: 700;
+
+    @include mobile-576 {
+      font-size: 2rem;
+    }
+  }
+
+  h2 {
+    font-size: 2rem;
+    color: $textColor-tint;
+    line-height: 1.2;
+    font-weight: 600;
+    text-align: left;
+    margin-top: 40px;
+
+    @include mobile-576 {
+      font-size: 1.75rem;
+    }
+  }
+
+  h3 {
+    font-size: 1.75rem;
+    color: $textColor-tint;
+    line-height: 1.2;
+    font-weight: 600;
+    text-align: left;
+    margin-top: 40px;
+
+    @include mobile-576 {
+      font-size: 1.5rem;
+    }
+  }
+
+  p {
+    font-size: 1rem;
+    color: $textColor-default;
+    line-height: 2;
+    font-weight: 400;
+    margin: 10px 0;
+  }
+
+  .text-bold {
+    font-weight: 700;
+    color: #ffde73;
+  }
+
+  img {
+    width: 90%;
+    margin: 30px;
+  }
+
+  .text-link {
+    display: inline-block;
+    color: #cf5757;
+  }
+
+  .text-italic {
+    font-style: italic;
+  }
+
+  table {
+    text-align: center;
+    max-width: 800px;
+    margin: 10px auto;
+    width: 98%;
+
+    thead {
+      color: #fff7e4;
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 1.2;
+      background-color: #bb9432;
+    }
+
+    tbody {
+      background-color: #ffe298;
+      line-height: 1.5;
+      font-size: 16px;
+      color: #241d17;
+
+      tr:nth-child(odd) {
+        background-color: #fef2d1;
+      }
+    }
+
+    th,
+    td {
+      padding: 10px 0;
+      border: 0.5px solid #bb9432;
+    }
+
+    th:nth-child(1),
+    th:nth-child(2) {
+      border-right: 0.5px solid transparent;
+    }
+
+    td:nth-child(1) {
+      font-weight: 700;
+    }
+
+    th:nth-child(2) {
+      @include mobile-576 {
+        border-right: 0.5px solid #bb9432;
+      }
+    }
+
+    th:nth-child(1),
+    td:nth-child(1) {
+      @include mobile-576 {
+        display: none;
+      }
+    }
+
+    .table-bold {
+      font-weight: 700;
+    }
+  }
+
+  .FAQs {
+    .accordion-item {
+      background-color: $primary_color-default;
+    }
+
+    h2.accordion-header>button {
+      font-weight: 700;
+      background-color: $primary_color-tint;
+      color: $textColor-tint;
+      opacity: 0.8;
+      font-size: 18px;
+
+      &:not(.collapsed) {
+        color: $textColor-tint;
+      }
+
+      &:focus {
+        box-shadow: 0 0 0.25rem #fae9be;
+      }
+
+      &::after {
+        background-image: url("/images/icon/faq-down.png");
+      }
+    }
+
+    .accordion-body {
+      font-size: 16px;
+      line-height: 1.5;
+    }
+  }
+
+  ul {
+    padding-left: 1rem;
+
+    li {
+      line-height: 1.5;
+      list-style-type: disc;
+    }
+  }
+
+  ol {
+    padding-left: 1rem;
+
+    li {
+      line-height: 1.5;
+      list-style-type: decimal;
+    }
+  }
+}

@@ -2,31 +2,16 @@
   overflow: hidden;
 
   p {
-    animation: moving 20s linear infinite;
+    animation: moving 25s linear infinite;
 
-  }
-
-  @media screen and (max-width:1024px) {
-    p {
-      animation: moving-1024 20s linear infinite;
-    }
-  }
-
-  @media screen and (max-width:900px) {
-    p {
-      animation: moving-900 15s linear infinite;
-    }
-  }
-
-  @media screen and (max-width:800px) {
-    p {
-      animation: moving-800 15s linear infinite;
+    @include mobile-576 {
+      animation: moving-576 25s linear infinite;
     }
   }
 
   @keyframes moving {
     0% {
-      transform: translate(200%, 0);
+      transform: translate(76vw, 0);
     }
 
     100% {
@@ -34,29 +19,9 @@
     }
   }
 
-  @keyframes moving-1024 {
+  @keyframes moving-576 {
     0% {
-      transform: translate(180%, 0);
-    }
-
-    100% {
-      transform: translate(-100%, 0);
-    }
-  }
-
-  @keyframes moving-900 {
-    0% {
-      transform: translate(150%, 0);
-    }
-
-    100% {
-      transform: translate(-100%, 0);
-    }
-  }
-
-  @keyframes moving-800 {
-    0% {
-      transform: translate(130%, 0);
+      transform: translate($headerNoticeRW-576, 0);
     }
 
     100% {

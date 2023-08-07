@@ -2,6 +2,7 @@ body {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   overscroll-behavior-y: contain;
   padding-top: $headerHeight;
+  user-select: none;
 }
 
 img {

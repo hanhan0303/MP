@@ -2,171 +2,295 @@ main {
   background-color: $primary_color-default;
 }
 
-.rightBar {
-  &_nav {
-    @include flex-column;
-    width: 74px;
-    background: #241d17;
-    border: 2px solid $textColor-tint;
-    position: fixed;
-    top: 50%;
-    right: 0;
-    z-index: 101;
-    padding: 10px;
-    border-radius: 15px 0 0 15px;
-    transform: translateY(-50%);
-    transition: opacity 1s, right 1s;
+.header__login {
+  background-color: rgba(26, 20, 15, 0.8);
+  cursor: pointer;
+  @include max-1200;
+  position: relative;
 
-    li {
-      @include flex-center;
-      width: 50px;
-      height: 50px;
-      cursor: pointer;
-      border-radius: 50%;
-      position: relative;
+  .login-container {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    position: absolute;
+    top: 10px;
+    right: 80px;
+    width: 245px;
+    padding: 0 20px 10px;
+    z-index: 20;
+    background-color: rgba(26, 20, 15, 0.8);
 
-      &:nth-last-child(1) {
-        &:hover {
-          background-color: transparent;
-        }
+    @include pad {
+      display: none;
+    }
+
+    &__title {
+      line-height: $loginHeight;
+
+      img {
+        display: none;
+        width: 50px;
       }
 
       span {
-        display: inline-block;
-        width: 40px;
-        height: 40px;
+        font-weight: 400;
+        font-size: 16px;
+        color: $textColor-default;
+      }
+    }
 
-        &.noticeBoard {
-          background: url("/images/icon/volume.svg");
+    &__main {
+      &__type {
+        @include flex-between;
+        color: $textColor-tint;
+        margin-bottom: 5px;
 
-          &:hover {
-            background: url("/images/icon/volume-hover.svg");
-          }
-        }
-
-        &.liveChat {
-          background: url("/images/icon/phone.svg");
-
-          &:hover {
-            background: url("/images/icon/phone-hover.svg");
-          }
-        }
-
-        &.appDownload {
-          background: url("/images/icon/download.svg");
-
-          &:hover {
-            background: url("/images/icon/download-hover.svg");
-          }
-        }
-
-        &.promotion {
-          background: url("/images/icon/gift.svg");
-
-          &:hover {
-            background: url("/images/icon/gift-hover.svg");
-          }
-        }
-
-        &.icon-close {
-          background: url("/images/icon/xmark.svg");
-          opacity: 0.8;
+        img {
+          opacity: 0;
           width: 30px;
-          height: 30px;
+        }
 
-          &:hover {
+        span {
+          font-size: 12px;
+
+          &:nth-last-child(1) {
+            &::after {
+              content: "➝";
+              display: inline-block;
+              width: 14px;
+              text-align: center;
+              line-height: 12px;
+              font-size: 5px;
+              margin-left: 2px;
+              border-radius: 50%;
+              border: 1px solid $textColor-tint;
+            }
+          }
+        }
+      }
+
+      &__input {
+        position: relative;
+        margin-bottom: 10px;
+
+        img {
+          display: none;
+          position: absolute;
+          top: 8px;
+          left: 7px;
+          width: 18px;
+          fill: #fff;
+        }
+
+        .input-uname-icon {
+          top: 10px;
+          left: 10px;
+          width: 15px;
+        }
+
+        input {
+          color: $textColor-tint;
+          width: 205px;
+          height: 35px;
+          line-height: 12px;
+          background-color: transparent;
+          padding: 5px 10px;
+          font-size: 12px;
+          border: 1px solid $textColor-default;
+
+          &::placeholder {
+            color: $textColor-tint;
             opacity: 1;
           }
+
+          &:-ms-input-placeholder {
+            color: $textColor-tint;
+          }
+
+          &::-ms-input-placeholder {
+            color: $textColor-tint;
+          }
         }
-      }
 
-      p {
-        display: none;
-        color: $primary_color-tint;
-        background-color: $textColor-tint;
-        font-size: 12px;
-        text-align: center;
-        padding: 0 10px;
-        position: absolute;
-        white-space: nowrap;
-        top: 10px;
-        right: 75px;
-        border-radius: 3px;
-        line-height: 30px;
-        user-select: none;
-
-        &::after {
-          border-top: 10px solid #fae9be;
-          content: "";
+        span {
           position: absolute;
-          width: 0;
-          height: 0;
-          border-left: 5px solid transparent;
-          border-right: 5px solid transparent;
-          transform: rotate(-90deg);
-          right: -10px;
-          top: 10px;
+          top: 12px;
+          right: 5px;
+          color: $textColor-default;
+          font-size: 12px;
+          width: 60px;
+          text-align: center;
+          white-space: nowrap;
         }
       }
 
-      &:hover {
-        background-color: $textColor-tint;
+      &__btn {
+        display: block;
+        width: 205px;
+        text-decoration: none;
+        border-radius: 5px;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 40px;
+        text-align: center;
+        color: rgba(48, 48, 48, 1);
+        background: $textColor-default;
+      }
 
-        p {
+      &__btnRegister {
+        display: block;
+        text-decoration: none;
+        width: 205px;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 40px;
+        text-align: center;
+        border-radius: 5px;
+        color: $textColor-default;
+        border: 1px solid $textColor-default;
+        margin-top: 5px;
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  .pwd {
+    input {
+      padding: 5px 60px 5px 10px;
+    }
+  }
+
+  .login-link {
+    display: block;
+    position: absolute;
+    top: 10px;
+    right: 80px;
+    width: 245px;
+    height: 285px;
+    z-index: 21;
+  }
+
+  .loginTopbar {
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-direction: row;
+    align-items: center;
+    position: fixed;
+    top: 97px;
+    right: 0px;
+    left: 0px;
+    z-index: 900;
+    width: 100vw;
+    padding: 0 20px;
+
+    .login-container__title {
+      display: flex;
+      align-items: center;
+      margin-right: 10px;
+
+      img {
+        display: block;
+      }
+
+      span {
+        font-weight: 600;
+        font-size: 18px;
+      }
+    }
+
+    .login-container__main {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+
+      &__type {
+        justify-content: flex-end;
+        margin-right: 10px;
+
+        @include pad-913 {
+          display: none;
+        }
+
+        img {
+          opacity: 1;
+        }
+
+        span:first-of-type {
+          display: none;
+        }
+
+        span:last-of-type {
+          display: inline-block;
+          line-height: 18px;
+          border-bottom: 1px solid #fae9be;
+
+          &::after {
+            display: none;
+          }
+        }
+      }
+
+      &__input {
+        margin-bottom: 0px;
+
+        @include pad-913 {
+          display: none;
+        }
+
+        i {
           display: block;
         }
+
+        img {
+          display: block;
+        }
+
+        input {
+          padding: 5px 0 5px 30px;
+          min-width: 185px;
+          border: 1px solid #535353;
+          margin-right: 5px;
+          height: 34px;
+        }
+      }
+
+      .pwd {
+        input {
+          padding: 5px 60px 5px 30px;
+        }
+      }
+
+      &__btn {
+        width: 130px;
+        font-size: 18px;
+        line-height: 34px;
+        margin-left: 10px;
+        font-weight: 400;
+
+        @include mobile {
+          width: 80px;
+        }
+      }
+
+      &__btnRegister {
+        margin: 0 0 0 10px;
+        width: auto;
+        font-weight: 400;
+        line-height: 32px;
+        padding: 0 10px;
       }
     }
-  }
 
-  &_showBtn {
-    background: #241d17;
-    border: 2px solid $textColor-tint;
-    position: fixed;
-    top: 50%;
-    right: -100px;
-    z-index: 101;
-    border-radius: 15px 0 0 15px;
-    transform: translateY(-50%);
-    padding: 15px 10px;
-    opacity: 0;
-    transition: opacity 1s, right 1s;
-    width: 78px;
-    height: 110px;
-
-    &-txt {
+    &~.login-link {
       display: block;
-      font-weight: 600;
-      color: $textColor-tint;
-      user-select: none;
-      font-size: 18px;
-      line-height: 21px;
+      position: fixed;
+      top: 97px;
+      right: 0px;
+      left: 0px;
+      z-index: 999;
+      width: 100vw;
+      height: 53px;
     }
-
-    &-btn {
-      display: block;
-      color: #241d17;
-      background-color: #fae9be;
-      width: 20px;
-      margin: 0 auto;
-      line-height: 20px;
-      text-align: center;
-      border-radius: 50%;
-      font-weight: 600;
-      font-size: 18px;
-      margin-top: 5px;
-      cursor: pointer;
-    }
-  }
-
-  .active {
-    opacity: 1;
-    right: 0px;
-  }
-
-  .deactive {
-    opacity: 0;
-    right: -100px;
   }
 }
 
@@ -181,6 +305,12 @@ main {
     cursor: pointer;
     font-size: 32px;
     color: #fff;
+
+    &:before {
+      @include mobile-576 {
+        content: "";
+      }
+    }
   }
 
   .banner-prevBtn {
@@ -199,6 +329,18 @@ main {
       width: 100%;
       min-height: 305px;
       max-height: 450px;
+
+      @include pad {
+        min-height: 250px;
+      }
+
+      @include mobile-576 {
+        min-height: 200px;
+      }
+
+      @include mobile {
+        min-height: 150px;
+      }
 
       &-img {
         width: 100%;
@@ -235,10 +377,18 @@ main {
 
     .slick-active .banner-bg {
       animation: bgMask 4s ease-out 0.8s;
+
+      @include mobile-576 {
+        animation: none;
+      }
     }
 
     .slick-active .banner-mask {
       animation: maskBigger 4s ease-out 0.8s;
+
+      @include mobile-576 {
+        animation: none;
+      }
     }
 
     @keyframes bgMask {
@@ -271,14 +421,40 @@ main {
         box-shadow: 0px 0px 15px transparent;
       }
     }
+
+    .slick-dots {
+      li {
+        button {
+          &:before {
+            opacity: 1;
+            color: rgba($color: #ffffff, $alpha: 0.2);
+          }
+        }
+
+        &.slick-active,
+        &:hover {
+          button {
+            &:before {
+              opacity: 0.5;
+              color: $textColor-default;
+            }
+          }
+        }
+      }
+    }
   }
 }
 
 .helpLink {
   background-color: $primary_color-dark;
   height: 80px;
-  @include flex-between;
+  @include flex-center;
   padding: 0 10px;
+
+  @include pad {
+    height: auto;
+    padding: 10px;
+  }
 
   ul {
     @include flex-between;
@@ -286,9 +462,29 @@ main {
     max-width: 1000px;
     margin: 0 auto;
 
+    @include pad {
+      flex-wrap: wrap;
+    }
+
     li {
       @include flex-center;
-      cursor: pointer;
+      flex: 1;
+      padding: 0 5px;
+
+      @include pad {
+        width: 50%;
+        flex: none;
+        justify-content: flex-start;
+        padding: 10px 5px 10px 60px;
+      }
+
+      @include mobile-576 {
+        padding: 10px 5px 10px 20px;
+      }
+
+      @include mobile {
+        padding: 10px;
+      }
 
       .link-icon {
         @include flex-center;
@@ -298,6 +494,10 @@ main {
         width: 52px;
         height: 52px;
 
+        @include pad {
+          margin-right: 5px;
+        }
+
         img {
           min-width: 45px;
         }
@@ -306,20 +506,29 @@ main {
       .link-txt {
         margin-left: 10px;
 
+        @include pad {
+          margin: 0;
+        }
+
         span {
+          display: block;
           color: $textColor-tint;
           font-size: 16px;
           line-height: 18px;
-          text-overflow: ellipsis;
-          display: -webkit-box;
-          -webkit-line-clamp: 2;
-          overflow: hidden;
-          -webkit-box-orient: vertical;
           text-align: left;
+
+          @include pad-913 {
+            font-size: 14px;
+          }
+
 
           &:nth-child(2) {
             color: $textColor-default;
             font-size: 14px;
+
+            @include pad-913 {
+              font-size: 12px;
+            }
           }
         }
       }
@@ -344,331 +553,63 @@ main {
   }
 }
 
-.gameNav {
-  height: 402px;
-  width: 95%;
-  max-width: 1200px;
-  margin: 20px auto;
-  display: flex;
+.aboutUs {
+  @include max-1200;
+  @include flex-between;
+  padding: 40px 20px;
 
-  &-left {
-    position: relative;
-    width: calc(100% - 224px);
-    height: 100%;
-
-    .gameNav-bg {
-      &-img {
-        width: 100%;
-        height: 402px;
-      }
-
-      .bgSlots {
-        width: 100%;
-        height: 355px;
-        overflow: hidden;
-      }
-
-      .bgSlots,
-      .bgFishing,
-      .bgLiveCasino,
-      .bgPoker,
-      .bgSports {
-        display: none;
-      }
-
-      .flexWrapBox {
-        display: flex;
-        background-color: $primary_color-default;
-        flex-wrap: wrap;
-        justify-content: space-evenly;
-        padding-bottom: $gameNavBottomH;
-
-        .bgSlots-item {
-          width: 180px;
-          height: 166px;
-          margin-bottom: 15px;
-
-          &-img {
-            @include flex-center;
-            position: relative;
-            height: 136px;
-
-            img {
-              height: 100%;
-            }
-
-            &-btn {
-              opacity: 0;
-              position: absolute;
-              top: 0;
-              bottom: 0;
-              right: 0;
-              left: 0;
-              @include flex-column;
-              background: rgba(0, 0, 0, .4);
-
-              span {
-                font-size: 13px;
-                width: 80px;
-                height: 32px;
-                line-height: 32px;
-                display: block;
-                cursor: pointer;
-                text-align: center;
-                border-radius: 20px;
-                transition: all 0.3s ease;
-                background: $textColor-default;
-                color: #ffffff;
-              }
-
-              .freeTrialBtn {
-                margin-bottom: 10px;
-              }
-            }
-          }
-
-          &:hover {
-            .bgSlots-item-img-btn {
-              opacity: 1;
-            }
-          }
-
-          &-txt {
-            line-height: 30px;
-            text-align: center;
-            background: #443636;
-            color: $textColor-default;
-          }
-        }
-      }
-    }
-
-    .gameNav-bottom {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      height: $gameNavBottomH;
-      background: rgba(0, 0, 0, 0.5);
-
-      &-logoList {
-        margin: 0 auto;
-        height: $gameNavBottomH;
-
-        li {
-          width: 164px;
-          height: $gameNavBottomH;
-          border-top: 4px solid transparent;
-          cursor: pointer;
-
-          &:hover {
-            background: rgba(68, 59, 40, .7);
-            border-color: $textColor-tint;
-          }
-
-          img {
-            width: 140px;
-            height: 40px;
-          }
-        }
-      }
-
-      .lessFiveLogo {
-        @include flex-center;
-        width: fit-content;
-      }
-
-      .slick-list {
-        margin: 0 82px;
-      }
-
-      .slick-prev,
-      .slick-next {
-        display: inline-block;
-        height: 100%;
-        width: 82px;
-        line-height: 100%;
-        cursor: pointer;
-        user-select: none;
-
-        &:hover {
-          background: #443b2a;
-        }
-      }
-
-      .slick-prev {
-        left: 0px;
-      }
-
-      .slick-next {
-        right: 0px;
-      }
-
-      .slick-prev::before,
-      .slick-next::before {
-        font-weight: 600;
-        font-family: 'inherit';
-        font-size: 30px;
-        color: #fff;
-        opacity: 1;
-      }
-
-      .slick-prev::before {
-        content: '<';
-      }
-
-      .slick-next::before {
-        content: '>';
-      }
-
-      .gameNav-bottom-fishing,
-      .gameNav-bottom-liveCasino,
-      .gameNav-bottom-poker,
-      .gameNav-bottom-slots,
-      .gameNav-bottom-sports {
-        display: none;
-      }
-    }
+  @include pad {
+    flex-direction: column;
+    padding: 40px;
   }
 
-  &-right {
-    width: 224px;
-    height: 100%;
-    overflow-y: scroll;
+  @include mobile {
+    padding: 20px 10px;
+  }
 
-    &::-webkit-scrollbar {
-      width: 0px;
+  &_img {
+    width: 45%;
+    overflow: hidden;
+
+    img {
+      min-width: 130%;
+      transform: translateX(-15%);
     }
 
-    ul {
-      width: 224px;
-      padding: 20px 10px 20px 20px;
-      background-color: #241d17;
+    @include pc {
+      width: calc(50% - 20px);
+    }
 
-      .choose-game {
-        .gameNav-icon {
-          background: $textColor-default;
-          opacity: 1;
+    @include pad {
+      margin-bottom: 10px;
+      width: 100%;
 
-          .gameNav-icon-lotto {
-            background-image: url("/images/icon/lottery-hover.svg");
-          }
-
-          .gameNav-icon-fish {
-            background: url("/images/icon/fishing-hover.svg") no-repeat center/contain;
-          }
-
-          .gameNav-icon-live {
-            background: url("/images/icon/livecasino-hover.svg") no-repeat center/contain;
-          }
-
-          .gameNav-icon-poker {
-            background: url("/images/icon/poker-hover.svg") no-repeat center/contain;
-          }
-
-          .gameNav-icon-slot {
-            background: url("/images/icon/slots-hover.svg") no-repeat center/contain;
-          }
-
-          .gameNav-icon-sport {
-            background: url("/images/icon/sports-hover.svg") no-repeat center/contain;
-          }
-        }
-
-        .gameNav-txt {
-          opacity: 1;
-        }
+      img {
+        min-width: 100%;
+        transform: translateX(0%);
       }
     }
 
-    &-item {
-      display: flex;
-      align-items: center;
-      cursor: pointer;
-      margin-bottom: 20px;
+  }
 
-      .gameNav-icon {
-        @include flex-center;
-        width: 53px;
-        height: 53px;
-        background: #5c4d24;
-        border-radius: 20px;
-        opacity: 0.5;
-        flex-shrink: 0;
+  &_txt {
+    width: 50%;
 
+    @include pad {
+      width: 100%;
+    }
 
-        span {
-          width: 45px;
-          height: 45px;
-        }
+    h2 {
+      color: $textColor-tint;
+      font-size: 32px;
+      font-weight: 700;
+      line-height: 1.2;
+    }
 
-        &-lotto {
-          background: url("/images/icon/lottery.svg") no-repeat center/contain;
-        }
-
-        &-fish {
-          background: url("/images/icon/fishing.svg") no-repeat center/contain;
-        }
-
-        &-live {
-          background: url("/images/icon/livecasino.svg") no-repeat center/contain;
-        }
-
-        &-poker {
-          background: url("/images/icon/poker.svg") no-repeat center/contain;
-        }
-
-        &-slot {
-          background: url("/images/icon/slots.svg") no-repeat center/contain;
-        }
-
-        &-sport {
-          background: url("/images/icon/sports.svg") no-repeat center/contain;
-        }
-
-      }
-
-      .gameNav-txt {
-        color: $textColor-default;
-        opacity: 0.5;
-        font-size: 19px;
-        padding-left: 35px;
-      }
-
-      &:hover {
-        .gameNav-icon {
-          background: $textColor-default;
-          opacity: 1;
-
-          .gameNav-icon-lotto {
-            background-image: url("/images/icon/lottery-hover.svg");
-          }
-
-          .gameNav-icon-fish {
-            background: url("/images/icon/fishing-hover.svg") no-repeat center/contain;
-          }
-
-          .gameNav-icon-live {
-            background: url("/images/icon/livecasino-hover.svg") no-repeat center/contain;
-          }
-
-          .gameNav-icon-poker {
-            background: url("/images/icon/poker-hover.svg") no-repeat center/contain;
-          }
-
-          .gameNav-icon-slot {
-            background: url("/images/icon/slots-hover.svg") no-repeat center/contain;
-          }
-
-          .gameNav-icon-sport {
-            background: url("/images/icon/sports-hover.svg") no-repeat center/contain;
-          }
-        }
-
-        .gameNav-txt {
-          opacity: 1;
-        }
-      }
+    p {
+      color: $textColor-default;
+      font-size: 18px;
+      line-height: 1.5;
     }
   }
 }
@@ -676,13 +617,37 @@ main {
 .playOnMobile {
   @include max-1200;
   background: url("/images/beautyGirl1.png") no-repeat 160px bottom/contain;
-  padding-top: 20px;
+  padding: 0 20px;
   display: flex;
+
+  @include pc {
+    padding: 0 20px;
+    background: none;
+    justify-content: center;
+  }
+
+  @include mobile-576 {
+    align-items: center;
+    flex-direction: column;
+    padding: 0;
+  }
 
   .prize {
     background: #110e09;
     width: 410px;
     height: $prizeH;
+
+    @include pad {
+      width: auto;
+    }
+
+    @include mobile-576 {
+      width: 410px;
+    }
+
+    @include mobile {
+      width: 95%;
+    }
 
     &_title {
       line-height: $prizeTitleH;
@@ -751,7 +716,6 @@ main {
           .game-name {
             line-height: 1.5;
             text-overflow: ellipsis;
-            white-space: nowrap;
             font-size: 12px;
             font-weight: 700;
             color: $textColor-tint;
@@ -789,6 +753,22 @@ main {
     text-align: center;
     line-height: 1.5;
 
+    @include pc {
+      margin-left: 100px;
+    }
+
+    @include pad-913 {
+      margin-left: 30px;
+    }
+
+    @include pad {
+      margin: 0 0 0 10px;
+    }
+
+    @include mobile-576 {
+      margin: 20px 0;
+    }
+
     &_title {
       font-weight: 600;
       font-size: 32px;
@@ -823,6 +803,7 @@ main {
       }
     }
   }
+
 }
 
 .bottomGameLink {
@@ -830,16 +811,16 @@ main {
   width: 100%;
   padding: 100px 60px 20px;
   @include flex-between;
-  background: url("/images/beautyGirl2.png") no-repeat 30px bottom/contain;
+  background: url("/images/beautyGirl2.png") no-repeat bottom/contain;
 
   &Items {
     display: flex;
     height: 328px;
+
   }
 
   &_item {
     width: 111px;
-    cursor: pointer;
     margin-right: 47px;
 
     span {
@@ -902,6 +883,55 @@ main {
       .LotteryGamesIcon {
         background: url("/images/lottery-icon-hover.png") no-repeat center/contain;
       }
+    }
+  }
+
+  @include pc {
+    padding: 30px;
+
+    &Items {
+      align-items: center;
+    }
+
+    &_item {
+      margin-right: 20px;
+    }
+  }
+
+  @include pad-913 {
+    padding: 20px;
+
+    &_item {
+      margin-right: 10px;
+    }
+  }
+
+  @include pad {
+    &Items {
+      height: 250px;
+    }
+
+    &_item {
+      margin-right: 0px;
+    }
+  }
+
+  @include mobile-576 {
+    background: none;
+    justify-content: center;
+    flex-direction: column;
+
+    &Items {
+      height: auto;
+      width: 300px;
+      justify-content: space-between;
+      margin-bottom: 10px;
+    }
+  }
+
+  @include mobile {
+    &Items {
+      width: 250px;
     }
   }
 }

@@ -14,3 +14,14 @@ $prizeH:520px;
 $prizeTitleH:46px;
 $prizeInfoH:65px;
 $prizeMarqueeH:calc($prizeH - $prizeInfoH - $prizeTitleH);
+$headerNoticePadding-576:10px;
+$headerNoticeLW-576:30px;
+$headerNoticeRW-576:calc(100vw - $headerNoticePadding-576 - $headerNoticePadding-576 - $headerNoticeLW-576);
+
+
+//RWD
+$breakpoint-pc:1024px;
+$breakpoint-pad913:913px;
+$breakpoint-pad:767px;
+$breakpoint-mobile576:576px;
+$breakpoint-mobile:414px;

@@ -7,7 +7,7 @@ header {
     top: 0;
     left: 0;
     right: 0;
-    width: 100%;
+    width: 100vw;
     height: $headerHeight;
 
     &__topWrap {
@@ -48,8 +48,10 @@ header {
             text-shadow: 0 1px 0 #000;
             font-size: 12px;
 
-            span {
-              cursor: pointer;
+            &:nth-child(1) {
+              @include mobile {
+                display: none;
+              }
             }
           }
 
@@ -93,15 +95,12 @@ header {
         padding: 0 5%;
         height: 65px;
 
-
         &-logo {
+          @include text-hide;
           min-width: 180px;
           width: 20%;
           height: 100%;
-
-          img {
-            height: 100%;
-          }
+          background: url("https://images.b51613.com:42666/wsd-images-prod/megapanalo/template/wt8805new_logo/wps_logo_mega_20221012135429.png") no-repeat center/contain;
         }
 
         &-menu {
@@ -109,6 +108,10 @@ header {
           justify-content: flex-end;
           align-items: center;
           height: 100%;
+
+          @include pad {
+            display: none;
+          }
 
           li {
             @include flex-center;
@@ -148,6 +151,149 @@ header {
 
         }
       }
+
+      .header__mobile {
+        &-Toggler {
+          display: none;
+
+          @include pad {
+            display: block;
+          }
+
+          .hamburger {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 60px;
+            height: 60px;
+            cursor: pointer;
+
+            span {
+              position: absolute;
+              width: 50%;
+              height: 4px;
+              border-radius: 10px;
+              background-color: $textColor-tint;
+              transition: margin-top 300ms, transform 300ms;
+
+              &:nth-child(1) {
+                margin-top: 20px;
+              }
+
+              &:nth-child(3) {
+                margin-top: -20px;
+              }
+
+            }
+
+            &.active {
+              span:nth-child(1) {
+                margin-top: 0;
+                transform: rotate(225deg);
+              }
+
+              span:nth-child(2) {
+                transform: rotate(315deg);
+              }
+
+              span:nth-child(3) {
+                margin-top: 0;
+                transform: rotate(135deg);
+              }
+            }
+          }
+        }
+
+        &-Nav {
+          z-index: 901;
+          position: absolute;
+          top: 97px;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          transform: scaleY(0);
+          transform-origin: 50% 0;
+          transition: transform 0.3s ease-in-out;
+
+          &.active {
+            transform: scaleY(1);
+          }
+
+          &-items {
+            height: calc(100vh - 97px);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: $primary_color-default;
+
+            li {
+              @include flex-center;
+              height: 100%;
+              width: 100%;
+              cursor: pointer;
+
+              a {
+                @include flex-column;
+                text-decoration: none;
+
+                span {
+                  color: $textColor-default;
+                  opacity: 0.5;
+                  padding: 5px 15px;
+                  font-size: 13px;
+
+                  &:nth-child(1) {
+                    color: $textColor-tint;
+                    text-align: center;
+                    opacity: 1;
+                  }
+                }
+              }
+
+              &:nth-last-child(1) {
+                a {
+                  display: block;
+                  width: 205px;
+                  border-radius: 5px;
+                  font-weight: 700;
+                  font-size: 16px;
+                  line-height: 40px;
+                  text-align: center;
+                  color: rgba(48, 48, 48, 1);
+                  background: $textColor-default;
+                }
+              }
+
+              &:nth-last-child(2) {
+                a {
+                  display: block;
+                  width: 205px;
+                  font-weight: 700;
+                  font-size: 14px;
+                  line-height: 40px;
+                  text-align: center;
+                  border-radius: 5px;
+                  color: $textColor-default;
+                  border: 1px solid $textColor-default;
+                }
+              }
+
+              &:focus {
+                background: $textColor-default;
+
+                a {
+                  span {
+                    color: $primary_color-default;
+                  }
+                }
+
+              }
+            }
+          }
+        }
+      }
     }
 
     &__noticeWrap {
@@ -157,6 +303,8 @@ header {
       top: 97px;
       left: 0;
       right: 0;
+      width: 100vw;
+
 
       .header__notice {
         @include flex-between;
@@ -165,11 +313,20 @@ header {
         color: $textColor-default;
         padding: 0 5% 0 0;
 
+        @include mobile-576 {
+          padding: 0 $headerNoticePadding-576;
+        }
+
         &-left {
           @include flex-center;
           width: 20%;
           flex-shrink: 0;
           min-width: 200px;
+
+          @include mobile-576 {
+            min-width: $headerNoticeLW-576;
+            width: $headerNoticeLW-576;
+          }
 
           i {
             background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAI0AAAAmCAMAAADOW+i6AAAA+VBMVEVHcEz/3lv/3lv/3lv/3lv/3lv/3lv/3lv/3lv/3lv/3lv/3lv/3lv/3lv/3lv/3lvu7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7/3lsvIitGAAAAUXRSTlMAYODQEPAwgMBAoJBQIHCwjR8C55kgjJi+HK/LuSHJxXyBdH4Lqfv6GobV4+LXuBAulJusknLo8Worl5pUbCxHpUVYIgw0GC8bFQ0/x0SrszurubcKAAACpElEQVQYGe3BxXYcSRBA0ZcYEYWSzDjMzIz2MEb9/8dMVVrHarVm500v+l6Ojo6Ojg7GC/4cB+Mlf5WD8bw7h+H1l3nRHU6/AB79wGVyjpX1bCyMrDJ5oBkCpuyyzKpWVmOFaivqCGQDskE244p3ffUa4N8B9/1HLknWJKiqi6pFncWAoOQyslGxKZlZ5dxQ2OhigChoVFX6GZiWClMiFNXCPvfrt18BvvQ7/AruXFK0KcBUqYMJzVgqiLIaimoqqtpzbu7ZaEyAKKiwGiKgS4CuH5cKmX3+Ds1Xfva73+YPv8WuKE0ErM9aTdjkJKxSB7kYmHJhXEY2KiogCipslpFc+g6i2TLyP/xtmpv+Gw/9X9y5UG2WZjbrddOprHLqIMNYOkIvIl2UVaARpVGpZUQUtDOroIEwWyQvkGLgKr9Gc+IPwP/mnnMhaCcSpQEUrLM0WddBUGBMEuSpQBMDjQoyIwoaVXuYerrAkocZkBKNfX6N5sQfgN/lT2eHdCIaZEVQLaomqJEhl8oqQ7ZzmWYomUaFHAdRUGFTEyUzD/3EKsti7PG3aE78Z/7xv3Bnh0xmOswWIljWgWFCjVUvMI+sLEoTjabreEIFLPYKKjTFEkyilUaFPf4mzYmfPfaH/OLfs0OSqjLXeSAntJ96Qw0wBYbEypRGjU1eKk+oAHNRUKHp0gQ1RaghY8XY4/7G3Q+AE7/DT+DOLrFsUXJRkIAiCdSglsFsktIDpjRqbKbEORUgFwVdVgZhGYHYQe7KEif23fPVp/Cx3wDu+zfsGFQ7SZP2nQ459DMioAaq2ovIVAysaFOMTQw8g9P3zm76Z3zuN4Bvv+aKXgzGgWqZmiGMPGUZcqWpmVWWzDO65R994qccig/d/X0OxnV3jo6Ojo6O4D8cZziWjkMrjwAAAABJRU5ErkJggg==") no-repeat left/cover;
@@ -181,15 +338,23 @@ header {
           span {
             line-height: 38px;
             font-size: 1rem;
+
+            @include mobile-576 {
+              display: none;
+            }
           }
         }
 
         &-reight {
           width: 80%;
           flex-shrink: 1;
-          cursor: pointer;
+
+          @include mobile-576 {
+            width: $headerNoticeRW-576;
+          }
 
           p {
+            white-space: nowrap;
             width: fit-content;
             font-size: 14px;
             user-select: none;
@@ -197,255 +362,5 @@ header {
         }
       }
     }
-  }
-
-  .header__login {
-    background-color: rgba(26, 20, 15, 0.8);
-    cursor: pointer;
-    @include max-1200;
-    position: relative;
-
-    .login-container {
-      display: flex;
-      justify-content: space-between;
-      flex-direction: column;
-      position: absolute;
-      top: 10px;
-      right: 80px;
-      width: 245px;
-      padding: 0 20px 10px;
-      z-index: 20;
-      background-color: rgba(26, 20, 15, 0.8);
-
-      &__title {
-        line-height: $loginHeight;
-
-        img {
-          display: none;
-          width: 50px;
-        }
-
-        span {
-          font-weight: 400;
-          font-size: 16px;
-          color: $textColor-default;
-        }
-      }
-
-      &__main {
-        &__type {
-          @include flex-between;
-          color: $textColor-tint;
-          margin-bottom: 5px;
-
-          img {
-            opacity: 0;
-            width: 30px;
-          }
-
-          span {
-            font-size: 12px;
-
-            &:nth-last-child(1) {
-              &::after {
-                content: "➝";
-                display: inline-block;
-                width: 14px;
-                text-align: center;
-                line-height: 12px;
-                font-size: 5px;
-                margin-left: 2px;
-                border-radius: 50%;
-                border: 1px solid $textColor-tint;
-              }
-            }
-          }
-        }
-
-        &__input {
-          position: relative;
-          margin-bottom: 10px;
-
-          img {
-            display: none;
-            position: absolute;
-            top: 8px;
-            left: 7px;
-            width: 18px;
-            fill: #fff;
-          }
-
-          .input-uname-icon {
-            top: 10px;
-            left: 10px;
-            width: 15px;
-          }
-
-          input {
-            color: $textColor-tint;
-            width: 205px;
-            height: 35px;
-            line-height: 12px;
-            background-color: transparent;
-            padding: 5px 10px;
-            font-size: 12px;
-            border: 1px solid $textColor-default;
-
-            &::placeholder {
-              color: $textColor-tint;
-              opacity: 1;
-            }
-
-            &:-ms-input-placeholder {
-              color: $textColor-tint;
-            }
-
-            &::-ms-input-placeholder {
-              color: $textColor-tint;
-            }
-          }
-
-          span {
-            position: absolute;
-            top: 12px;
-            right: 5px;
-            color: $textColor-default;
-            font-size: 12px;
-            width: 60px;
-            text-align: center;
-            white-space: nowrap;
-          }
-        }
-
-        &__btn {
-          width: 205px;
-          border-radius: 5px;
-          font-weight: 700;
-          font-size: 16px;
-          line-height: 40px;
-          text-align: center;
-          color: rgba(48, 48, 48, 1);
-          background: $textColor-default;
-        }
-
-        &__btnRegister {
-          width: 205px;
-          font-weight: 700;
-          font-size: 14px;
-          line-height: 40px;
-          text-align: center;
-          border-radius: 5px;
-          color: $textColor-default;
-          border: 1px solid $textColor-default;
-          margin-top: 5px;
-          margin-bottom: 10px;
-        }
-      }
-    }
-
-    .pwd {
-      input {
-        padding: 5px 60px 5px 10px;
-      }
-    }
-
-    .loginTopbar {
-      flex-direction: row;
-      align-items: center;
-      position: fixed;
-      top: 97px;
-      right: 0px;
-      left: 0px;
-      z-index: 900;
-      width: 100%;
-      padding: 0 20px;
-
-      .login-container__title {
-        display: flex;
-        align-items: center;
-        margin-right: 10px;
-
-        img {
-          display: block;
-        }
-
-        span {
-          font-weight: 600;
-          font-size: 18px;
-        }
-      }
-
-      .login-container__main {
-        display: flex;
-        align-items: center;
-        justify-content: flex-end;
-
-        &__type {
-          justify-content: flex-end;
-          margin-right: 10px;
-
-          img {
-            opacity: 1;
-          }
-
-          span:first-of-type {
-            display: none;
-          }
-
-          span:last-of-type {
-            display: inline-block;
-            line-height: 18px;
-            border-bottom: 1px solid #fae9be;
-
-            &::after {
-              display: none;
-            }
-          }
-        }
-
-        &__input {
-          margin-bottom: 0px;
-
-          i {
-            display: block;
-          }
-
-          img {
-            display: block;
-          }
-
-          input {
-            padding: 5px 0 5px 30px;
-            min-width: 185px;
-            border: 1px solid #535353;
-            margin-right: 5px;
-            height: 34px;
-          }
-        }
-
-        .pwd {
-          input {
-            padding: 5px 60px 5px 30px;
-          }
-        }
-
-        &__btn {
-          width: 130px;
-          font-size: 18px;
-          line-height: 34px;
-          margin-left: 10px;
-          font-weight: 400;
-        }
-
-        &__btnRegister {
-          margin: 0 0 0 10px;
-          width: auto;
-          font-weight: 400;
-          line-height: 32px;
-          padding: 0 10px;
-        }
-      }
-    }
-
   }
 }

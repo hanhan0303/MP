@@ -9,6 +9,11 @@ footer {
       @include flex-center;
       height: 36px;
 
+      @include pad {
+        flex-wrap: wrap;
+        height: auto;
+      }
+
       img {
         height: 36px;
       }
@@ -19,12 +24,13 @@ footer {
       color: #794e5e;
       font-size: 12px;
 
-      span {
+      a {
         color: $textColor-tint;
         display: inline-block;
         cursor: pointer;
         font-size: 12px;
         line-height: 30px;
+        text-decoration: none;
       }
     }
 

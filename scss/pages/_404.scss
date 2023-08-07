@@ -1,0 +1,80 @@
+.error-main {
+  @include flex-column;
+  background-color: #110e09;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  .error-bg {
+    font-size: 300px;
+    color: rgba(255, 255, 255, 0.1);
+    font-weight: 700;
+    width: 100vw;
+    text-align: center;
+    height: 80vh;
+    line-height: 80vh;
+
+    p {
+      @include mobile-576 {
+        font-size: 200px;
+        height: 60vh;
+        line-height: 60vh;
+      }
+
+      @include mobile {
+        font-size: 180px;
+      }
+    }
+  }
+
+  .error-text {
+    @include flex-center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    font-size: 35px;
+    color: #fae9be;
+    font-weight: 700;
+    width: 100vw;
+    text-align: center;
+    height: 80vh;
+    z-index: 10;
+    line-height: 1.2;
+    padding: 0 20px;
+
+    @include mobile-576 {
+      font-size: 30px;
+      height: 60vh;
+    }
+  }
+
+  nav {
+    width: 100vw;
+    text-align: center;
+    height: 20vh;
+
+    a {
+      color: #ccac57;
+      font-size: 20px;
+      text-decoration: none;
+      font-weight: 500;
+
+      span {
+        font-weight: 700;
+      }
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+
+    @include mobile-576 {
+      height: 40vh;
+    }
+  }
+}
