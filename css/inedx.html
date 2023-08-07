@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mega Panalo – Philippine’s Best Online Casino MegaPanalo</title>
+    <!-- 頁籤icon-->
+    <link href="/images/favicon.ico" rel="shortcut icon" />
+    <link href="/images/favicon.ico" rel="bookmark" />
+    <!-- 網站關鍵字、網站描述文字 -->
+    <meta name="keywords" content="" />
+    <meta
+      name="description"
+      content="Mega Panalo is the best online casino in the Philippines. MegaPanalo Casino provides legit gambling entertainment and real-time cash-out service around the world!"
+    />
+    <!-- 使用者在FB貼連結所顯示的資訊 -->
+    <meta
+      property="og:title"
+      content="Mega Panalo – Philippine’s Best Online Casino MegaPanalo"
+    />
+    <meta
+      property="og:description"
+      content="Mega Panalo is the best online casino in the Philippines. MegaPanalo Casino provides legit gambling entertainment and real-time cash-out service around the world!"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://megapanalo.ph/" />
+    <meta property="og:image" content="/images/banner06.jpg" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://megapanalo.ph/" />
+    <meta
+      property="twitter:title"
+      content="Mega Panalo – Philippine’s Best Online Casino MegaPanalo"
+    />
+    <meta
+      property="twitter:description"
+      content="Mega Panalo is the best online casino in the Philippines. MegaPanalo Casino provides legit gambling entertainment and real-time cash-out service around the world!"
+    />
+    <meta property="twitter:image" content="/images/banner06.jpg" />
+
+    <!--Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
+      crossorigin="anonymous"
+    />
+    <!-- slick套件CSS -->
+    <link rel="stylesheet" type="text/css" href="/libs/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="/libs/slick/slick-theme.css" />
+    <!-- 自定義CSS -->
+    <link rel="stylesheet" href="/css/all.css" />
+  </head>
+  <body>
+    <header>
+      <div class="header">
+        <div class="header__topWrap">
+          <div class="header__top">
+            <div class="header__top-left">
+              <a
+                href="https://hawkplayplus.com/providers/jili-games/"
+                target="_blank"
+                rel="nofollow"
+                >JILI Games</a
+              >
+              <a
+                href="https://hawkplayplus.com/providers/fa-chai-slot/"
+                target="_blank"
+                rel="nofollow"
+                >Fa Chai</a
+              >
+              <a
+                href="https://hawkplayplus.com/live-dealer/evolution-gaming-overview/"
+                target="_blank"
+                rel="nofollow"
+                >EVO</a
+              >
+            </div>
+            <ul class="header__top-right">
+              <li><span>Mobile bet</span></li>
+              <li class="license">
+                <div class="license-icon">
+                  <img
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAARCAMAAAAxIdauAAACUlBMVEUAAQRceV0WIxwBAQQAAQYAAQcABAQAAQWUXgUYJh4ZKCAXJiAGBAY6PBXHlQRrOAQIBgZIRhUKAwQYKh6VYgSPXAWJWwWPUQSteQUSJSAnMitfMgTlsQSpcwSvdwWgbAUaKB+tdwSsdgQeLyilbASeawUjMiikbgWDUQV6TQVxQgTFjQQxHAY7PBlhiWirdgVIRxkiMSgQDQa9hwWsdwXLkwQiFgaOVQQbLSnTmgR2SgWTYAU2IAUaDwQmNipuQgXCigS5gwUFBAatdwWmbgUkMihmiG2baAWSXQW5gwRdg3lqPwUmOiuHVwXQlQRMJQQ0IwadZwUfLSddhHwCAgWYZwXwsARpi20SDAVbe2CIVwWpcgUHAgQYJR0lNCdbeVvLlQRbelslOidmPAYWGxwhEQQkKierdQUvRjkNQowfO1M4PiLGgQR5XQhTSA9cel0ACA0mEgR9TQYBCxCqcwVdiCuCbzECBQTsugQcYIIBERjXnQRkiXAlW4Rcbh4hEwXJkARyPwSChx+RZBLFigRPiZWDaC+aYgV5SAQJBgRdgzBZij0fUDEUUEKZcQx+ZAo/PhNUjkaMRASUYQVTKARtlT3OjwQACBTjpwRUg4hBej5xcRWPWgXKiQTBiQR/OwQHEQ97j1+CUwQAAgQlGQSUlUZgiGssGgZNKQRri21oi21pi25fiHNcfmhINwmRcidQeoh4oEKNXRRSRwubXAUzg58tSzgKKD6Udig2YiYPP4QABQUOQIiLQgRbd1hbd1QHJT08SColMzIuXWhQb3IzPh85ac6aAAAA9klEQVQIHQXBvU7CUBQA4HPuOfbSP2oBaxQTHdQwGZW4MZjgYIyJu7Mx+gQ+gw/hor6KCc4mJihMDjIgTaFQ2t7e+n14e8qIc+aP73A0hkuAF3h9fgAAqPP0KriRPBgyNZIQjxx/7az/ORlFSWjg/lfHp2Q2iac6triA3nGhwgStJSBtNVzdZ2nZIrSBydLcNmSu5uUio533luPVgpUSxcBnF4JKM92Oo+EbSDps15q4B65u7fZSOlkN0seu/PPKg3MT71zTIdK6upHbhaCikoqcvE1lsSdo+ZP9yuq6slkqERtPC5plJPFCCRbR/TiLzGu/C2X5D2RiWxj5mPeeAAAAAElFTkSuQmCC"
+                    alt="Mega Panalo’s legal license "
+                    title="Legal license icon"
+                  />
+                </div>
+                <span class="license-txt">Show License</span>
+                <div class="license-img">
+                  <img
+                    src="https://www.megapanalo.com/img/license-img.350f0dd4.png"
+                    alt="Mega Panalo’s legal license png"
+                    title="Legal License"
+                  />
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="header__navWrap">
+          <div class="header__nav">
+            <a class="header__nav-logo" href="https://megapanalo.ph/"
+              ><h1>megapanalo</h1></a
+            >
+            <ul class="header__nav-menu">
+              <li>
+                <a href="https://megapanalo.ph/">
+                  <span>Home</span>
+                  <span>HOME</span>
+                </a>
+              </li>
+              <li>
+                <a href="/register.html">
+                  <span>Register</span>
+                  <span>REGISTER</span>
+                </a>
+              </li>
+              <li>
+                <a href="/download.html">
+                  <span>Download</span>
+                  <span>DOWNLOAD</span>
+                </a>
+              </li>
+              <li>
+                <a href="/agent.html">
+                  <span>Agent</span>
+                  <span>AGENT</span>
+                </a>
+              </li>
+              <li>
+                <a href="https://playonhk.org/" target="_blank" rel="nofollow">
+                  <span>Login</span>
+                  <span>LOGIN</span>
+                </a>
+              </li>
+            </ul>
+            <div class="header__mobile-Toggler">
+              <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+            <div class="header__mobile-Nav">
+              <ul class="header__mobile-Nav-items">
+                <li>
+                  <a href="https://megapanalo.ph/">
+                    <span>Home</span>
+                    <span>HOME</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="/register.html">
+                    <span>Register</span>
+                    <span>REGISTER</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="/download.html">
+                    <span>Download</span>
+                    <span>DOWNLOAD</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="/agent.html">
+                    <span>Agent</span>
+                    <span>AGENT</span>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://playonhk.org/"
+                    target="_blank"
+                    rel="nofollow"
+                  >
+                    <span>Login</span>
+                    <span>LOGIN</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://playonhk.org/" target="_blank" rel="nofollow"
+                    >Login</a
+                  >
+                </li>
+                <li>
+                  <a href="https://playonhk.org/" target="_blank" rel="nofollow"
+                    >Register</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="header__noticeWrap">
+          <div class="header__notice">
+            <div class="header__notice-left">
+              <i class="news-icon"></i>
+              <span>System Notification</span>
+            </div>
+            <div class="header__notice-reight marquee-H">
+              <p>
+                Dear players, welcome to MEGA PANALO. We are now promoting
+                &emsp; 1. 27% VENGEANCE FUND #Araw-Araw &emsp; 2. BINGO RAPIDO
+                WIN WIN KA DITO 1% &emsp; 3. JILI Double WIN !! &emsp; 4. MEGA
+                BONUS NAIPON NA DEPOSITO AY 6%
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div id="loginBox" class="header__login">
+        <div class="login-container">
+          <div class="login-container__title">
+            <img
+              src="/images/loginTitle-user-circle-icon.svg"
+              alt="User Login icon"
+              title="User Login"
+            />
+            <span>User Login</span>
+          </div>
+          <div class="login-container__main">
+            <div class="login-container__main__type">
+              <img
+                src="/images/loginMain-user-circle-icon.svg"
+                alt="SMS icon"
+                title="SMS"
+              />
+              <span> Username/Mobile </span>
+              <span> SMS </span>
+            </div>
+            <div class="login-container__main__input">
+              <img
+                class="input-uname-icon"
+                src="/images/user-icon.svg"
+                alt="Username input box"
+                title="Username input"
+              />
+              <input placeholder="username" type="text" class="uname-input" />
+            </div>
+            <div class="login-container__main__input pwd">
+              <img
+                src="/images/lock-icon.svg"
+                alt="Password input box"
+                title="Password input"
+              />
+              <input placeholder="password" type="password" />
+              <span class="br_forget_button">Forgot</span>
+            </div>
+            <a
+              href="https://playonhk.org/"
+              class="login-container__main__btn"
+              target="_blank"
+              rel="nofollow"
+            >
+              <span>Login</span>
+            </a>
+            <a
+              href="https://playonhk.org/"
+              class="login-container__main__btnRegister"
+              target="_blank"
+              rel="nofollow"
+            >
+              <span>Register</span>
+            </a>
+          </div>
+        </div>
+        <a
+          href="https://playonhk.org/"
+          target="_blank"
+          rel="nofollow"
+          class="login-link"
+        ></a>
+      </div>
+      <div class="bannerWrap">
+        <i class="banner-prevBtn fa-solid fa-chevron-left"></i>
+        <div class="banners-carousel">
+          <div class="banner">
+            <img
+              class="banner-img"
+              src="/images/banner01.png"
+              data-src="/images/banner01.png"
+              alt="Mega Panalo’s 2% Deposit Rebate promotion"
+              title="2% Deposit Rebate"
+            />
+            <div class="banner-bg"></div>
+            <div class="banner-mask">
+              <img
+                class="banner-mask-img"
+                data-src="/images/banner01.png"
+                src="/images/banner01.png"
+                alt="Mega Panalo’s 2% Deposit Rebate promotion"
+                title="2% Deposit Rebate"
+              />
+            </div>
+          </div>
+          <div class="banner">
+            <img
+              class="banner-img"
+              src="/images/banner02.png"
+              data-src="/images/banner02.png"
+              alt="Mega Panalo’s Premium Reward VIP Club"
+              title="Premium Reward VIP Club"
+            />
+            <div class="banner-bg"></div>
+            <div class="banner-mask">
+              <img
+                class="banner-mask-img"
+                src="/images/banner02.png"
+                data-src="/images/banner02.png"
+                alt="Mega Panalo’s Premium Reward VIP Club"
+                title="Premium Reward VIP Club"
+              />
+            </div>
+          </div>
+          <div class="banner">
+            <img
+              class="banner-img"
+              src="/images/banner03.png"
+              data-src="/images/banner03.png"
+              alt="Mega Panalo’s 10% Cashback promotion"
+              title="10% Cashback"
+            />
+            <div class="banner-bg"></div>
+            <div class="banner-mask">
+              <img
+                class="banner-mask-img"
+                src="/images/banner03.png"
+                data-src="/images/banner03.png"
+                alt="Mega Panalo’s 10% Cashback promotion"
+                title="10% Cashback"
+              />
+            </div>
+          </div>
+          <div class="banner">
+            <img
+              class="banner-img"
+              src="/images/banner04.png"
+              data-src="/images/banner04.png"
+              alt="Mega Panalo’s FC Fa Chai New Year Fever Promotion"
+              title="FC Fa Chai New Year Fever"
+            />
+            <div class="banner-bg"></div>
+            <div class="banner-mask">
+              <img
+                class="banner-mask-img"
+                src="/images/banner04.png"
+                data-src="/images/banner04.png"
+                alt="Mega Panalo’s FC Fa Chai New Year Fever Promotion"
+                title="FC Fa Chai New Year Fever"
+              />
+            </div>
+          </div>
+          <div class="banner">
+            <img
+              class="banner-img"
+              src="/images/banner05.jpg"
+              data-src="/images/banner05.jpg"
+              alt="Mega Panalo's JILI Double Win Event"
+              title="JILI Double Win Event"
+            />
+            <div class="banner-bg"></div>
+            <div class="banner-mask">
+              <img
+                class="banner-mask-img"
+                src="/images/banner05.jpg"
+                data-src="/images/banner05.jpg"
+                alt="Mega Panalo's JILI Double Win Event"
+                title="JILI Double Win Event"
+              />
+            </div>
+          </div>
+        </div>
+        <i class="banner-nextBtn fa-solid fa-chevron-right"></i>
+      </div>
+      <div class="helpLink">
+        <ul>
+          <li>
+            <div class="link-icon">
+              <img
+                src="/images/icon/game.svg"
+                alt="Casino guide Button"
+                title="Casino guide"
+              />
+            </div>
+            <div class="link-txt">
+              <span>Guide</span>
+              <span>Easy to Start</span>
+            </div>
+          </li>
+          <li>
+            <div class="link-icon">
+              <img
+                src="/images/icon/hands.svg"
+                alt="Application Agent Button"
+                title="Application Agent"
+              />
+            </div>
+            <div class="link-txt">
+              <span>Application Agent</span>
+              <span>Join Us to Make Money</span>
+            </div>
+          </li>
+          <li>
+            <div class="link-icon">
+              <img
+                src="/images/icon/coinpig.svg"
+                alt="Deposit instructions Button"
+                title="Deposit instructions"
+              />
+            </div>
+            <div class="link-txt">
+              <span>Deposit instructions</span>
+              <span>Easy and Secure</span>
+            </div>
+          </li>
+          <li>
+            <div class="link-icon">
+              <img
+                src="/images/icon/money.svg"
+                alt="Withdrawal instructions Button"
+                title="Withdrawal instructions"
+              />
+            </div>
+            <div class="link-txt">
+              <span>Withdrawal instructions</span>
+              <span>Quick and Easy</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="aboutUs">
+        <div class="aboutUs_img">
+          <img
+            src="/images/gameNavBg02.jpg"
+            data-src="/images/gameNavBg02.jpg"
+            alt=""
+            title=""
+          />
+        </div>
+        <div class="aboutUs_txt">
+          <h2>About MegaPanalo</h2>
+          <p>
+            Welcome to Mega Panalo Casino, the official online casino
+            Philippines. We are an exciting and reliable platform for you to
+            play your favorite casino games from the comfort of your home! With
+            several years of experience in the industry, we offer our players an
+            entertaining, secure and rewarding gambling environment. Our team of
+            passionate professionals is committed to providing a world-class
+            gambling environment.
+          </p>
+        </div>
+      </div>
+      <div class="playOnMobile">
+        <div class="prize">
+          <div class="prize_title"><span>List of winners</span></div>
+          <div class="prize_info">
+            <span>Game name</span>
+            <span>player</span>
+            <span>Win amount</span>
+          </div>
+          <div class="prize_marquee">
+            <!-- <span>No data</span> -->
+            <ul class="winList">
+              <li class="win-item">
+                <img
+                  src="/images/win-game/Samba.png"
+                  alt="samba-game png"
+                  title="samba-game png"
+                />
+                <div class="win-game">
+                  <p class="custom-name">***z02</p>
+                  <p class="game-name">won in <span>Samba</span></p>
+                </div>
+                <span class="win-amount">₱569,808</span>
+              </li>
+              <li class="win-item">
+                <img
+                  src="/images/win-game/Bombing-Fishing.png"
+                  alt="bombing-fishing png"
+                  title="bombing-fishing png"
+                />
+                <div class="win-game">
+                  <p class="custom-name">*****r10</p>
+                  <p class="game-name">won in <span>Bombing Fishing</span></p>
+                </div>
+                <span class="win-amount">₱161,544</span>
+              </li>
+              <li class="win-item">
+                <img
+                  src="/images/win-game/Baccarat C06.png"
+                  alt="baccarat-c06 png"
+                  title="baccarat-c06 png"
+                />
+                <div class="win-game">
+                  <p class="custom-name">********316</p>
+                  <p class="game-name">won in <span>Baccarat C06</span></p>
+                </div>
+                <span class="win-amount">₱692,250</span>
+              </li>
+              <li class="win-item">
+                <img
+                  src="/images/win-game/Dinosaur-Tycoon.png"
+                  alt="dinosaur-tycoon png"
+                  title="dinosaur-tycoon png"
+                />
+                <div class="win-game">
+                  <p class="custom-name">*****son</p>
+                  <p class="game-name">won in <span>Dinosaur Tycoon</span></p>
+                </div>
+                <span class="win-amount">₱2,291,440</span>
+              </li>
+              <li class="win-item">
+                <img
+                  src="/images/win-game/Dinosaur-Tycoon.png"
+                  alt="dinosaur-tycoon png"
+                  title="dinosaur-tycoon png"
+                />
+                <div class="win-game">
+                  <p class="custom-name">*****p5e</p>
+                  <p class="game-name">won in <span>Dinosaur Tycoon</span></p>
+                </div>
+                <span class="win-amount">₱713,000</span>
+              </li>
+              <li class="win-item">
+                <img
+                  src="/images/win-game/Baccarat E03.png"
+                  alt="baccarat-e03 png"
+                  title="baccarat-e03 png"
+                />
+                <div class="win-game">
+                  <p class="custom-name">***erq</p>
+                  <p class="game-name">won in <span>Baccarat E03</span></p>
+                </div>
+                <span class="win-amount">₱1,102,563</span>
+              </li>
+              <li class="win-item">
+                <img
+                  src="/images/win-game/Bombing-Fishing.png"
+                  alt="bombing-fishing png"
+                  title="bombing-fishing png"
+                />
+                <div class="win-game">
+                  <p class="custom-name">*****156</p>
+                  <p class="game-name">won in <span>Bombing Fishing</span></p>
+                </div>
+                <span class="win-amount">₱990,117</span>
+              </li>
+              <li class="win-item">
+                <img
+                  src="/images/win-game/Samba.png"
+                  alt="samba-game png"
+                  title="samba-game png"
+                />
+                <div class="win-game">
+                  <p class="custom-name">******omy</p>
+                  <p class="game-name">won in <span>Samba</span></p>
+                </div>
+                <span class="win-amount">₱413,098</span>
+              </li>
+              <li class="win-item">
+                <img
+                  src="/images/win-game/Royal-Fishing.png"
+                  alt="royal-fishing png"
+                  title="royal-fishing png"
+                />
+                <div class="win-game">
+                  <p class="custom-name">***qq2</p>
+                  <p class="game-name">won in <span>Royal Fishing</span></p>
+                </div>
+                <span class="win-amount">₱700,212</span>
+              </li>
+              <li class="win-item">
+                <img
+                  src="/images/win-game/Baccarat E03.png"
+                  alt="baccarat-e03 png"
+                  title="baccarat-e03 png"
+                />
+                <div class="win-game">
+                  <p class="custom-name">********isi</p>
+                  <p class="game-name">won in <span>Baccarat E03</span></p>
+                </div>
+                <span class="win-amount">₱2,281,366</span>
+              </li>
+              <li class="win-item">
+                <img
+                  src="/images/win-game/Baccarat C06.png"
+                  alt="baccarat-c06 png"
+                  title="baccarat-c06 png"
+                />
+                <div class="win-game">
+                  <p class="custom-name">****123</p>
+                  <p class="game-name">won in <span>Baccarat C06</span></p>
+                </div>
+                <span class="win-amount">₱999,000</span>
+              </li>
+              <li class="win-item">
+                <img
+                  src="/images/win-game/Lightning-Roulette.png"
+                  alt="lightning-roulette png"
+                  title="lightning-roulette png"
+                />
+                <div class="win-game">
+                  <p class="custom-name">******mic</p>
+                  <p class="game-name">
+                    won in <span>Lightning Roulette</span>
+                  </p>
+                </div>
+                <span class="win-amount">₱1,205,954</span>
+              </li>
+              <li class="win-item">
+                <img
+                  src="/images/win-game/Lightning-Roulette.png"
+                  alt="lightning-roulette png"
+                  title="lightning-roulette png"
+                />
+                <div class="win-game">
+                  <p class="custom-name">*****0c0</p>
+                  <p class="game-name">
+                    won in <span>Lightning Roulette</span>
+                  </p>
+                </div>
+                <span class="win-amount">₱868,100</span>
+              </li>
+              <li class="win-item">
+                <img
+                  src="/images/win-game/Golden Wealth Baccarat.png"
+                  alt="golden-wealth-baccarat png"
+                  title="golden-wealth-baccarat png"
+                />
+                <div class="win-game">
+                  <p class="custom-name">********w88</p>
+                  <p class="game-name">
+                    won in <span>Golden Wealth Baccarat</span>
+                  </p>
+                </div>
+                <span class="win-amount">₱671,233</span>
+              </li>
+              <li class="win-item">
+                <img
+                  src="/images/win-game/Royal-Fishing.png"
+                  alt="royal-fishing png"
+                  title="royal-fishing png"
+                />
+                <div class="win-game">
+                  <p class="custom-name">****apm</p>
+                  <p class="game-name">won in <span>Royal Fishing</span></p>
+                </div>
+                <span class="win-amount">₱298,421</span>
+              </li>
+              <li class="win-item">
+                <img
+                  src="/images/win-game/Dinosaur-Tycoon.png"
+                  alt="dinosaur-tycoon png"
+                  title="dinosaur-tycoon png"
+                />
+                <div class="win-game">
+                  <p class="custom-name">***777</p>
+                  <p class="game-name">won in <span>Dinosaur Tycoon</span></p>
+                </div>
+                <span class="win-amount">₱1,537,005</span>
+              </li>
+              <li class="win-item">
+                <img
+                  src="/images/win-game/Dinosaur-Tycoon.png"
+                  alt="dinosaur-tycoon png"
+                  title="dinosaur-tycoon png"
+                />
+                <div class="win-game">
+                  <p class="custom-name">******88m</p>
+                  <p class="game-name">won in <span>Dinosaur Tycoon</span></p>
+                </div>
+                <span class="win-amount">₱109,643</span>
+              </li>
+              <li class="win-item">
+                <img
+                  src="/images/win-game/Golden Wealth Baccarat.png"
+                  alt="golden-wealth-baccarat png"
+                  title="golden-wealth-baccarat png"
+                />
+                <div class="win-game">
+                  <p class="custom-name">******acv</p>
+                  <p class="game-name">
+                    won in <span>Golden Wealth Baccarat</span>
+                  </p>
+                </div>
+                <span class="win-amount">₱877,000</span>
+              </li>
+              <li class="win-item">
+                <img
+                  src="/images/win-game/Baccarat E03.png"
+                  alt="baccarat-e03 png"
+                  title="baccarat-e03 png"
+                />
+                <div class="win-game">
+                  <p class="custom-name">*****ara</p>
+                  <p class="game-name">won in <span>Baccarat E03</span></p>
+                </div>
+                <span class="win-amount">₱295,143</span>
+              </li>
+              <li class="win-item">
+                <img
+                  src="/images/win-game/Bombing-Fishing.png"
+                  alt="bombing-fishing png"
+                  title="bombing-fishing png"
+                />
+                <div class="win-game">
+                  <p class="custom-name">*****0qq</p>
+                  <p class="game-name">won in <span>Bombing Fishing</span></p>
+                </div>
+                <span class="win-amount">₱714,090</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="qrcode">
+          <p class="qrcode_title">Scan</p>
+          <p>Enjoy Your Journey</p>
+          <div class="qrcode_img">
+            <img
+              src="images/Qrcode.jpg"
+              title="Mega Panalo’s Mobile Application Download QR Code"
+              alt="Mega Panalo’s mobile application download QR Code for phone scanning"
+            />
+          </div>
+          <div class="qrcode_icon">
+            <span
+              ><img
+                src="images/android2.svg"
+                title="Mega Panalo’s APK Download Button"
+                alt="Mega Panalo’s Android APK download button"
+            /></span>
+            <span
+              ><img
+                src="images/apple.svg"
+                title="Mega Panalo’s App Download Button"
+                alt="Mega Panalo’s iOS App download button"
+            /></span>
+          </div>
+          <p>Play Now</p>
+          <p class="qrcode_title">MOBILE BET</p>
+        </div>
+      </div>
+      <div class="bottomGameLink">
+        <div class="bottomGameLinkItems">
+          <div class="bottomGameLink_item">
+            <span class="bottomGameLink_item_img liveVideoIcon"></span>
+            <span class="bottomGameLink_item_title">Live Video</span>
+            <span class="bottomGameLink_item_txt">LIVE CASINO</span>
+          </div>
+          <div class="bottomGameLink_item">
+            <span class="bottomGameLink_item_img SlotsGamesIcon"></span>
+            <span class="bottomGameLink_item_title">Slots Games</span>
+            <span class="bottomGameLink_item_txt">CASINO</span>
+          </div>
+        </div>
+        <div class="bottomGameLinkItems">
+          <div class="bottomGameLink_item">
+            <span class="bottomGameLink_item_img SportsBettingIcon"></span>
+            <span class="bottomGameLink_item_title">Sports Betting</span>
+            <span class="bottomGameLink_item_txt">SPORT BETTING</span>
+          </div>
+          <div class="bottomGameLink_item">
+            <span class="bottomGameLink_item_img LotteryGamesIcon"></span>
+            <span class="bottomGameLink_item_title">Lottery Games</span>
+            <span class="bottomGameLink_item_txt">LOTTERY</span>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="footer_contain">
+        <div class="footer_contain_logo">
+          <img
+            src="/images/footer-logo/6-11.png"
+            alt="BBIN’s gambling game in Mega Panalo Casino"
+            title="BBIN"
+          />
+          <img
+            src="/images/footer-logo/6-12.png"
+            alt="Microgaming’s slot game in Mega Panalo Casino"
+            title="Micro Gaming"
+          />
+          <img
+            src="/images/footer-logo/6-13.png"
+            alt="Playtech’s gambling game in Mega Panalo Casino"
+            title="Playtech"
+          />
+          <img
+            src="/images/footer-logo/6-14.png"
+            alt="Asia Gaming’s live casino game in Mega Panalo Casino"
+            title="Asia Gaming"
+          />
+          <img
+            src="/images/footer-logo/6-15.png"
+            alt="Oriental Game’s live casino game in Mega Panalo Casino"
+            title="Oriental Game"
+          />
+          <img
+            src="/images/footer-logo/6-16.png"
+            alt="Gold Deluxe’s live casino game in Mega Panalo Casino"
+            title="Gold Deluxe"
+          />
+          <img
+            src="/images/footer-logo/6-17.png"
+            alt="IBC Sports’ sports betting game in Mega Panalo Casino"
+            title="IBC Sports"
+          />
+        </div>
+        <ul class="footer_contain_nav">
+          <li>&emsp;<a href="#" rel="nofollow">Deposit</a>&emsp;/</li>
+          <li>&emsp;<a href="#" rel="nofollow">Withdrawal</a></li>
+        </ul>
+        <p class="footer_contain_copyright">
+          Copyright © All Rights Reserved by Mega Panalo
+        </p>
+      </div>
+    </footer>
+
+    <!-- fontawesome CDN -->
+    <script
+      src="https://kit.fontawesome.com/e4bfe886c9.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- jQuery CDN -->
+    <script
+      src="https://code.jquery.com/jquery-3.6.1.slim.min.js"
+      integrity="sha256-w8CvhFs7iHNVUtnSP0YKEg00p9Ih13rlL9zGqvLdePA="
+      crossorigin="anonymous"
+    ></script>
+    <!-- Bootstrap JavaScript Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+      crossorigin="anonymous"
+    ></script>
+    <!-- slick套件JS -->
+    <script
+      type="text/javascript"
+      src="//code.jquery.com/jquery-1.11.0.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="//code.jquery.com/jquery-migrate-1.2.1.min.js"
+    ></script>
+    <script type="text/javascript" src="/libs/slick/slick.min.js"></script>
+    <!-- lazy loading JS -->
+    <script type="text/javascript" src="/js/lazysizes.min.js"></script>
+    <!-- 自定義JS -->
+    <script type="text/javascript" src="/js/index.js"></script>
+    <script type="text/javascript" src="/js/all.js"></script>
+  </body>
+</html>

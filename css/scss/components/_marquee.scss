@@ -1,0 +1,37 @@
+.marquee-H {
+  overflow: hidden;
+
+  p {
+    animation: moving 25s linear infinite;
+
+    @include mobile-576 {
+      animation: moving-576 25s linear infinite;
+    }
+  }
+
+  @keyframes moving {
+    0% {
+      transform: translate(76vw, 0);
+    }
+
+    100% {
+      transform: translate(-100%, 0);
+    }
+  }
+
+  @keyframes moving-576 {
+    0% {
+      transform: translate($headerNoticeRW-576, 0);
+    }
+
+    100% {
+      transform: translate(-100%, 0);
+    }
+  }
+
+  &:hover {
+    p {
+      animation-play-state: paused;
+    }
+  }
+}
